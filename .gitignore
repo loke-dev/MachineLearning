@@ -1,3 +1,4 @@
 .idea/
+out
 resources/libsvm.jar
 resources/weka.jar
