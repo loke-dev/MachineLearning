@@ -12,7 +12,10 @@ public class Main {
 //        dt.test();
 
         Libsvm ls = new Libsvm("./resources/matchmaker_fixed.arff");
-        ls.train();
-        ls.test();
+        ls.init();
+
+//        NeuralNetwork nn = new NeuralNetwork("./resources/matchmaker_fixed.arff");
+//        nn.train();
+//        nn.test();
     }
 }

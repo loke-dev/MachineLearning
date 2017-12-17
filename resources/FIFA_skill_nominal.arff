@@ -1,0 +1,27 @@
+@relation FIFAskill
+
+@attribute GamePad {great, average, junk}
+@attribute StiffNeck {yes, no}
+@attribute HoursPlayPerWeek {few, middle, many}
+@attribute PlayerSkill {good, bad}
+
+@data
+great,yes,middle,good
+average,yes,middle,good
+junk,yes,many,good
+average,no,many,good
+great,yes,middle,good
+average,no,many,good
+junk,no,many,good
+great,yes,middle,good
+average,no,many,good
+junk,no,few,bad
+average,no,middle,bad
+great,yes,few,bad
+average,no,few,bad
+average,no,middle,bad
+great,yes,few,bad
+junk,no,many,bad
+junk,yes,few,bad
+great,no,few,bad
+average,yes,few,bad
