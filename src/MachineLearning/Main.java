@@ -11,11 +11,11 @@ public class Main {
 //        dt.train();
 //        dt.test();
 
-        Libsvm ls = new Libsvm("./resources/matchmaker_fixed.arff");
-        ls.init();
+//        Libsvm ls = new Libsvm("./resources/matchmaker_fixed.arff");
+//        ls.init();
 
-//        NeuralNetwork nn = new NeuralNetwork("./resources/matchmaker_fixed.arff");
-//        nn.train();
-//        nn.test();
+        NeuralNetwork nn = new NeuralNetwork("./resources/matchmaker_fixed.arff");
+        nn.train();
+        nn.test();
     }
 }

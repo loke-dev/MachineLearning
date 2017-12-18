@@ -19,7 +19,7 @@ class DecisionTrees {
     private void readData() throws Exception {
         ConverterUtils.DataSource source = new ConverterUtils.DataSource(filename);
         data = source.getDataSet();
-        data.setClassIndex(0);
+        data.setClassIndex(data.numAttributes() - 1);
     }
 
     void train() throws Exception {
@@ -29,7 +29,7 @@ class DecisionTrees {
 
     void test() throws Exception {
         Evaluation eval = new Evaluation(data);
-        eval.crossValidateModel(cl, data, 10, new java.util.Random(1));
+        eval.evaluateModel(cl, data);
         System.out.println(eval.toSummaryString());
         System.out.println(eval.toMatrixString());
     }

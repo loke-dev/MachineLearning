@@ -20,6 +20,7 @@ class Libsvm implements Classifier {
         String absolutePath = file.getAbsolutePath();
         Evaluator evaluator = new Evaluator(new Libsvm(filename), absolutePath);
         evaluator.evaluateWholeSet();
+        evaluator.evaluateCV();
     }
 
     private void convertData() {
@@ -63,6 +64,11 @@ class Libsvm implements Classifier {
         param.kernel_type = svm_parameter.RBF;
         param.cache_size = 20000;
         param.eps = 0.001;
+
+        // Disable output from Libsvm
+        svm.svm_set_print_string_function(new libsvm.svm_print_interface(){
+            @Override public void print(String s) {} // Disables svm output
+        });
 
         model = svm.svm_train(prob, param);
     }
